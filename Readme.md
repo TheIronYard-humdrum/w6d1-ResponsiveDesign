@@ -16,3 +16,4 @@
         
 * Used `:nth-child(even)` and `:nth-child(odd)` to select message divs and give alternating background colors.
 * Used `:last-child` to remove lingering margin from last message div.
+* Used `$lightblue: #color` to declare color variable.  Color can now be changed in varibale, rather than in every instance of the style.
