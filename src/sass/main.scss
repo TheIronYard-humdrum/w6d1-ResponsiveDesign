@@ -135,7 +135,7 @@ header {
 }
 
 
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 700px) {
   
   body {
     .container {
@@ -149,7 +149,7 @@ header {
             content: "";
             position: absolute;
             left: -12px;
-            top: 12px;
+            top: 7px;
             width: 0;
             height: 0;
             border-style: solid;
@@ -168,7 +168,7 @@ header {
             content: "";
             position: absolute;
             left: -12px;
-            top: 12px;
+            top: 7px;
             width: 0;
             height: 0;
             border-style: solid;
@@ -198,7 +198,7 @@ header {
       }
       .icon {
         position: absolute;
-        top: -2px;
+        top: -1px;
         right: -32px;
         margin-left: 30%;
       }
