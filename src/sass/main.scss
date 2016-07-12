@@ -242,7 +242,7 @@ header {
 @media screen and (min-width: 1100px) {
   body {
     .container {
-      margin: 40px auto;
+      min-margin: 40px 10%;
     }
     
     .time {
