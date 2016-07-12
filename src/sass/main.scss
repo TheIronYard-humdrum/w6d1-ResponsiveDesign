@@ -14,23 +14,25 @@
   // border: solid black 1px;
 }
 
+$lightblue: #afdcf8;
+$darkblue: #3594CB;
 
 
 .dark {
   h3 {
-    color: #3594CB;
+    color: $darkblue;
   }
 }
 
 .dark-entry {
-  background-color: #3594CB;
-  border: solid 1px #3594CB;
+  background-color: $darkblue;
+  border: solid 1px $darkblue;
   position: relative;
   &::before {
     content: "";
     border-style: solid;
     border-width: 0 12px 12px 12px;
-    border-color: transparent transparent #3594CB transparent;
+    border-color: transparent transparent $darkblue transparent;
     position: absolute;
     top: -13px;
     left: 14px;
@@ -39,13 +41,13 @@
 
 .light { 
   h3 {
-    color: #6CBFEE;
+    color: $lightblue;
   }
 }
 
 .light-entry {
-  background-color: #6CBFEE;
-  border: solid 1px #6CBFEE;
+  background-color: $lightblue;
+  border: solid 1px $lightblue;
   position: relative;
   &::before {
     content: "";
@@ -53,7 +55,7 @@
     height: 0;
     border-style: solid;
     border-width: 0 12px 12px 12px;
-    border-color: transparent transparent #6CBFEE transparent;
+    border-color: transparent transparent $lightblue transparent;
     position: absolute;
     top: -13px;
     left: 14px;
@@ -90,11 +92,22 @@ header {
     font-weight: 300;
   }
   h3 { //clock
-    color: #6CBFEE;
     font-size: 2.6em;
     margin-left: 2px;
   }
 }
+
+.entry:nth-child(odd) {
+          .time h3 {
+            color: $lightblue
+          }
+      }
+      .entry:nth-child(even) {
+          .time h3 {
+            color: $darkblue
+          }
+      }
+
 
 .icon {
   display: flex;
@@ -102,7 +115,7 @@ header {
   align-items: center;
   width: 55px;
   height: 55px;
-  background-color: #AFDCF8;
+  background-color: $lightblue;
   border-radius: 100%;
   p {
     display: flex;
@@ -111,7 +124,7 @@ header {
     width: 40px;
     height: 40px;
     margin: 0;
-    background-color: #46A4DA;
+    background-color: $darkblue;
     border-radius: 100%;
     font-size: 2.5em;
   }
@@ -125,7 +138,7 @@ header {
     font-size: 2.6em;
     padding-bottom: 10px;
     margin: 20px 4% 0;
-    border-bottom: solid 1px #A1D6F4;
+    border-bottom: solid 1px white;
   }
   p {
     font-size: 1.6em;
@@ -144,7 +157,7 @@ header {
       font-size: 62.5%;
       .entry:nth-child(odd) {
         .message {
-          background-color: #6CBFEE;
+          background-color: $lightblue;
           &:before {
             content: "";
             position: absolute;
@@ -154,16 +167,16 @@ header {
             height: 0;
             border-style: solid;
             border-width: 12.5px 12px 12.5px 0;
-            border-color: transparent #6CBFEE transparent transparent;
+            border-color: transparent $lightblue transparent transparent;
           }
         }
         .time h3 {
-          color: #6CBFEE;
+          color: $lightblue;
         }
       }
       .entry:nth-child(even) {
         .message {
-          background-color: #3594CB;
+          background-color: $darkblue;
           &:before {
             content: "";
             position: absolute;
@@ -173,11 +186,11 @@ header {
             height: 0;
             border-style: solid;
             border-width: 12.5px 12px 12.5px 0;
-            border-color: transparent #3594CB transparent transparent;
+            border-color: transparent $darkblue transparent transparent;
           }
         }
         .time h3 {
-          color: #3594CB;
+          color: $darkblue;
         }
       }
     }
@@ -189,7 +202,7 @@ header {
 
     header {
       min-width: 18%;
-      border-right: 10px solid #AFDCF8;
+      border-right: 10px solid $lightblue;
       position: relative;
       padding-top: 10px;
       h3,
@@ -219,7 +232,6 @@ header {
         font-size: 3em;
         padding-bottom: 12px;
         margin: 40px 8% 25px;
-        border-bottom: solid 1px #A1D6F4;
       }
         
       p {
